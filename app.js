@@ -8,7 +8,10 @@ const connectDB = require("./config/db");
 const app = express();
 
 connectDB();
-
+// Root route (IMPORTANT for "Cannot GET /" fix)
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
