@@ -5,7 +5,7 @@ const itemSchema = new mongoose.Schema({
 
   isCollected: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 
   tripId: {
